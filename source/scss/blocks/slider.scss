@@ -36,6 +36,10 @@
     padding: 5rem 2rem 0 5rem;
   }
 
+  .slider__item-text {
+    animation: .5s ease-in 0s FadeInSlides;
+  }
+
   &:nth-child(even) {
     .slider__item-text {
       align-self: flex-end;
@@ -62,6 +66,17 @@
         margin-top: auto;
       }
     }
+  }
+}
+
+@keyframes FadeInSlides {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 

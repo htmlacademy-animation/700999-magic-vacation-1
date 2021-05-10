@@ -93,6 +93,8 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.27;
+  animation: .5s ease-in 0s FadeIn;
+  transform: translateY(-50px);
 
   @media (min-width: $stop-scaling) {
     width: 509px;
@@ -160,5 +162,16 @@
   @media (min-width: $stop-scaling) {
     margin: 0 0 0 -5px;
     font-size: 48px;
+  }
+}
+
+@keyframes FadeIn {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-50px);
+    opacity: 1;
   }
 }
